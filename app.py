@@ -83,21 +83,18 @@ def start_download():
         progress_bar.place(relx=0.43, rely=0.5, anchor="center")
         progress_text_label.place(relx=0.0256, rely=0.984, anchor="w")
 
-        save_dir = os.path.join(os.getenv("APPDATA"), ".minecraft", "versions", "ParrotClient")
+        save_dir = os.path.join(os.getenv("APPDATA"), ".minecraft", "versions", "parrot")
         downloads = [
             {
-                "url": "https://github.com/yuzu-krs/ParrotClientInstaller/raw/refs/heads/main/ParrotClient.jar",
-                "save_path": os.path.join(save_dir, "ParrotClient.jar")
+                "url": "https://github.com/yuzu-krs/ParrotClient-dlfile/raw/refs/heads/main/parrot.jar",
+                "save_path": os.path.join(save_dir, "parrot.jar")
             },
             {
-                "url": "https://github.com/yuzu-krs/ParrotClientInstaller/raw/refs/heads/main/steve.mp3",
-                "save_path": os.path.join(save_dir, "steve.mp3")
-            },
-            {
-                "url": "https://github.com/yuzu-krs/ParrotClientInstaller/raw/refs/heads/main/ParrotClient.json",
-                "save_path": os.path.join(save_dir, "ParrotClient.json")
+                "url": "https://raw.githubusercontent.com/yuzu-krs/ParrotClient-dlfile/main/parrot.json",
+                "save_path": os.path.join(save_dir, "parrot.json")
             }
         ]
+      
 
         progress_var.set(0)
         total_files = len(downloads)
